@@ -1,0 +1,24 @@
+note over browser:
+the brower has already executed the spa.js that has GET 
+in the previous step.
+This is important as all the logic of how the form behaves
+is in there.
+end note
+
+
+note over browser:
+when the form is submitted, 
+the server does not response with the HTML code, 
+instead the script spa.json is triggered so it fetches 
+the form-element from the page, prevent the default 
+handling of form submit and adds the new note into the 
+already existing list and in the end
+send a post request to new_note_spa with the following json content:
+{content: "heyyyyy", date: "2022-08-20T20:55:03.603Z"}
+end note
+
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+
+
+
+server-->browser: response {"message":"note created"}
