@@ -8,7 +8,7 @@ defined in the header's Location
 ('/exampleapp/notes')
 end note
 
-browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/notes
+browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/notes
 server-->browser: status code 200, send HTML-code
 browser->server: HTTP GET https://studies.cs.helsinki.fi/exampleapp/main.css
 server-->browser: status code 200, send main.css
